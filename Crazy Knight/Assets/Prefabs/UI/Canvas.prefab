@@ -113,6 +113,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7812546961017056227}
     m_Modifications:
+    - target: {fileID: 7002440159954510200, guid: 5198ebb31e35cd948870baf510d619a3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 593.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002440159954510200, guid: 5198ebb31e35cd948870baf510d619a3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 71.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7002440159954510203, guid: 5198ebb31e35cd948870baf510d619a3, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -220,6 +228,18 @@ PrefabInstance:
     - target: {fileID: 7002440161179965751, guid: 5198ebb31e35cd948870baf510d619a3, type: 3}
       propertyPath: m_Name
       value: GameButtons
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002440161179965751, guid: 5198ebb31e35cd948870baf510d619a3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002440161629574912, guid: 5198ebb31e35cd948870baf510d619a3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 722.30005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7002440161629574912, guid: 5198ebb31e35cd948870baf510d619a3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 71.7
       objectReference: {fileID: 0}
     - target: {fileID: 7002440161629574915, guid: 5198ebb31e35cd948870baf510d619a3, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1055,6 +1075,10 @@ PrefabInstance:
     - target: {fileID: 7949988816406381365, guid: c609b909e6cf80c4c9b9db4c183f6008, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949988816406381365, guid: c609b909e6cf80c4c9b9db4c183f6008, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7949988816567938376, guid: c609b909e6cf80c4c9b9db4c183f6008, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

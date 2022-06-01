@@ -21,8 +21,8 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void Update() {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        anim.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        //horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        //anim.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         anim.SetFloat("yVelosity", rb.velocity.y);
 

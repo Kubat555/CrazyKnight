@@ -69,11 +69,14 @@ public class Player : MonoBehaviour
             saveEvent.GetComponent<Animator>().SetTrigger("Save");
             obj.gameObject.SetActive(false);
         }
+
         if (obj.CompareTag("EndPoint"))
         {
             gameButtons.SetActive(false);
             endLevelUI.SetActive(true);
+            LevelController.instance.isEndGame();
         }
+
         if (obj.CompareTag("Spikes"))
         {
             TakeDamage(maxHealth);

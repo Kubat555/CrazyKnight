@@ -2550,6 +2550,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1748546952199363482, guid: 5c3a6665aeca80e41b8ff9a809bdf46b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1776910859}
+    - target: {fileID: 1748546952199363482, guid: 5c3a6665aeca80e41b8ff9a809bdf46b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1776910858}
+    - target: {fileID: 1748546952199363482, guid: 5c3a6665aeca80e41b8ff9a809bdf46b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748546952199363482, guid: 5c3a6665aeca80e41b8ff9a809bdf46b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
     - target: {fileID: 7812546961017056227, guid: 5c3a6665aeca80e41b8ff9a809bdf46b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2856,6 +2872,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea555e84212ca194496bf3010b29b6ac, type: 3}
+--- !u!82 &1776910858 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5977635301291197190, guid: ea555e84212ca194496bf3010b29b6ac, type: 3}
+  m_PrefabInstance: {fileID: 1776910857}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1776910859 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5977635301291197188, guid: ea555e84212ca194496bf3010b29b6ac, type: 3}
+  m_PrefabInstance: {fileID: 1776910857}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9a898291f572741aa61b2d3a52f8e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1847485100
 GameObject:
   m_ObjectHideFlags: 0

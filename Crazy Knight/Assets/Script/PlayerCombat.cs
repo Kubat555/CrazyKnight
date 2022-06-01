@@ -25,10 +25,10 @@ public class PlayerCombat : MonoBehaviour
     void Update()
     {
         if(Time.time >= nextAtttackTime){
-            if (Input.GetButtonDown("Fire1"))
-            {
-                Attack();
-            }
+            //if (Input.GetButtonDown("Fire1"))
+            //{
+            //    Attack();
+            //}
             attacked = true;
         }
         
