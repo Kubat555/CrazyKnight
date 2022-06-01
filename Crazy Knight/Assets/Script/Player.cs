@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public GameObject gameButtons;
+    public GameObject endLevelUI;
+
     public AudioClip getHit;
     public AudioClip death;
 
@@ -28,6 +31,10 @@ public class Player : MonoBehaviour
     PlayerMovement playerMove;
     PlayerCombat playerCombat;
 
+    static public int kills = 0;
+
+    int playerAttempt = 3; //Попытки героя возродится
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +45,7 @@ public class Player : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
         playerMove = GetComponent<PlayerMovement>();
         playerCombat = GetComponent<PlayerCombat>();
+
     }
 
     void Update()
@@ -60,6 +68,15 @@ public class Player : MonoBehaviour
             spawnPosition = obj.transform;
             saveEvent.GetComponent<Animator>().SetTrigger("Save");
             obj.gameObject.SetActive(false);
+        }
+        if (obj.CompareTag("EndPoint"))
+        {
+            gameButtons.SetActive(false);
+            endLevelUI.SetActive(true);
+        }
+        if (obj.CompareTag("Spikes"))
+        {
+            TakeDamage(maxHealth);
         }
     }
 
@@ -97,7 +114,7 @@ public class Player : MonoBehaviour
     {
         anim.SetBool("IsDead", true);
         audioSourse.PlayOneShot(death);
-        
+        playerAttempt -= 1;
         if(playerMove != null)
         {
             playerMove.enabled = false;
@@ -111,7 +128,13 @@ public class Player : MonoBehaviour
 
     void RespawnObj()
     {
-        //SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+        if(playerAttempt <= 0)
+        {
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+            kills = 0;
+            return;
+        } 
+
 
         transform.position = spawnPosition.position;
         currentHealth = maxHealth;

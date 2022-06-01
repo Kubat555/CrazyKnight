@@ -122,6 +122,7 @@ public class enemyController : MonoBehaviour
     }
 
     void DestroyObj(){
+        Player.kills += 1;
         Destroy(gameObject);
     }
 }

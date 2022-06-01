@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class EnemyRangeAttack : MonoBehaviour
 {
-    public bool rangeAttack;
-    public Vector2 fireDirection;
+    public bool attack;
+ 
 
     public GameObject fireBall;
     public GameObject player;
+    public Transform point;
+
+    [SerializeField] float attackRange = 5f;
+    [SerializeField] Vector2 fireDirection;
 
     Rigidbody2D rb;
 
     public float attackInterval;
     float attackTime;
     bool attacked;
+    bool angry = false;
 
     private void Start()
     {
@@ -25,10 +30,18 @@ public class EnemyRangeAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(rangeAttack && !attacked)
+        if (Vector2.Distance(transform.position, player.transform.position) <= attackRange)
         {
-            Attack();
-            attacked = true;
+            angry = true;
+        }
+        else
+        {
+            angry = false;
+        }
+
+        if (attack && !attacked && angry)
+        {
+            Angry();
         }
         if (attacked)
         {
@@ -47,5 +60,20 @@ public class EnemyRangeAttack : MonoBehaviour
         GameObject projectileObject = Instantiate(fireBall, rb.position, Quaternion.identity);
         Projectile projectile = projectileObject.GetComponent<Projectile>();
         projectile.Launch(fireDirection, 700);
+    }
+
+
+    void Angry()
+    {
+        if(player.transform.position.x - transform.position.x < 0)
+        {
+            fireDirection = Vector2.left;
+        }
+        else if(player.transform.position.x - transform.position.x > 0)
+        {
+           fireDirection = Vector2.right;
+        }
+        Attack();
+        attacked = true;
     }
 }
