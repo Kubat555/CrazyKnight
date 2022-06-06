@@ -18,6 +18,9 @@ public class MainMenu : MonoBehaviour
             case 2 :
                 level2.interactable = true;
                 break;
+            case 3:
+                level2.interactable = true;
+                break;
         }
     }
     

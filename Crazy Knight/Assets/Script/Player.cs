@@ -81,6 +81,10 @@ public class Player : MonoBehaviour
         {
             TakeDamage(maxHealth);
         }
+        if (obj.CompareTag("WeakSpikes"))
+        {
+            TakeDamage(1);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D obj)

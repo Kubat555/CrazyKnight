@@ -9,6 +9,7 @@ TagManager:
   - HealthFragment
   - EndPoint
   - Spikes
+  - WeakSpikes
   layers:
   - Default
   - TransparentFX

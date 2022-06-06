@@ -6,7 +6,8 @@ public class EnemyRangeAttack : MonoBehaviour
 {
     public bool attack;
  
-
+    public AudioClip fireballAudio;
+    AudioSource audio;
     public GameObject fireBall;
     public GameObject player;
     public Transform point;
@@ -24,6 +25,7 @@ public class EnemyRangeAttack : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        audio = GetComponent<AudioSource>();
         attackTime = attackInterval;
     }
 
@@ -60,6 +62,7 @@ public class EnemyRangeAttack : MonoBehaviour
         GameObject projectileObject = Instantiate(fireBall, rb.position, Quaternion.identity);
         Projectile projectile = projectileObject.GetComponent<Projectile>();
         projectile.Launch(fireDirection, 700);
+        audio.PlayOneShot(fireballAudio);
     }
 
 

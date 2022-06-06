@@ -7,7 +7,6 @@ public class LevelController : MonoBehaviour
 {
     public static LevelController instance = null;
     int sceneIndex;
-    int levelComplete;
 
     // Start is called before the first frame update
     void Start()
@@ -16,17 +15,15 @@ public class LevelController : MonoBehaviour
         {
             instance = this;
         }
-
+        Time.timeScale = 1f;
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
-        levelComplete = PlayerPrefs.GetInt("LevelComplete");
-
     }
 
     public void isEndGame()
     {
-
-        PlayerPrefs.SetInt("LevelComplete", sceneIndex);
-
+        if (sceneIndex > PlayerPrefs.GetInt("LevelComplete"))
+            PlayerPrefs.SetInt("LevelComplete", sceneIndex);
+        Time.timeScale = 1f;
     }
 
 }
